@@ -17,4 +17,28 @@ class MoviesController extends Controller
 
         return view('show', compact('movie'));
     }
+
+    public function create(){
+        return view('create');
+    }
+
+    public function store(){
+        $this->validate(
+            request(),
+            [
+                'title'=>'required',
+                'genre'=>'required',
+                'age'=>'required|1900>',
+                'storyline'=>'required|max:1000'
+            ]
+        );
+        Movie::create([
+            'title'=>request('title'),
+            'genre'=>request('genre'),
+            'age'=>request('age'),
+            'storyline'=>request('storyline')
+        ]);
+
+        return redirect('/movies');
+    }
 }

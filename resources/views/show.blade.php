@@ -6,9 +6,16 @@
 
     <div class="blog-post">
             <h2 class="blog-post-title">{{ $movie->title }}</h2>
-            <p class="blog-post-meta">December 14, 2013 by <a href="#">Chris</a></p>
             
-            <p>{{ $movie->body }}</p>
+            <p>{{$movie->genre}}</p>
+
+            <p>{{$movie->director}}</p>
+
+            <p>{{$movie->age}}</p>
+
+            <p>{{$movie->storyline}}</p>
+
+
     </div><!-- /.blog-post -->
         
 @endsection
