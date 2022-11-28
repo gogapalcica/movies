@@ -28,15 +28,18 @@ class MoviesController extends Controller
             [
                 'title'=>'required',
                 'genre'=>'required',
-                'age'=>'required|1900>',
+                'director',
+                'age'=>'numeric|min:1900|max:'.date('Y'),
                 'storyline'=>'required|max:1000'
             ]
         );
         Movie::create([
             'title'=>request('title'),
             'genre'=>request('genre'),
+            'director'=>request('director'),
             'age'=>request('age'),
-            'storyline'=>request('storyline')
+            'storyline'=>request('storyline'),
+            'published'=>true,
         ]);
 
         return redirect('/movies');
