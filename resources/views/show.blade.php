@@ -29,13 +29,19 @@
             </li>
             
         @endforeach
-        
         </ul>
-            
-
-
     </div>
 
-
+    <div>
+        <form method="POST" action = "/movies/{{$movie->id}}/comments">
+            @csrf
+            <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Leave a comment:</label>
+            <textarea name= "content" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        
+            <button type="submit" class="btn btn-primary">Comment it</button>
+        
+        </form>
+    </div>
         
 @endsection
