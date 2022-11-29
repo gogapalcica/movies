@@ -17,7 +17,7 @@
         <input name= "age" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Year">
         <label for="exampleFormControlTextarea1" class="form-label">Storyline</label>
         <textarea name= "storyline" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-
+        
         <button type="submit" class="btn btn-primary">Add Movie</button>
 
         </div>

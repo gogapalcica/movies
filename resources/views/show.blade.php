@@ -17,5 +17,25 @@
 
 
     </div><!-- /.blog-post -->
+
+    <div class="blog-post">
+        <h2>Comments:</h2>
+
+        <ul>
+        @foreach ($movie->comments as $comment)
+
+            <li>
+                {{$comment->content}}
+            </li>
+            
+        @endforeach
+        
+        </ul>
+            
+
+
+    </div>
+
+
         
 @endsection
